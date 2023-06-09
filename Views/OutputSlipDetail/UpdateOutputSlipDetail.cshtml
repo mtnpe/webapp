@@ -1,0 +1,64 @@
+﻿@using WebApp.Models.BL.OutputSlipDetailBL
+@model OutputSlipDetailDTO
+@{
+    ViewData["Title"] = "Update OutputSlipDetail";
+}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="UpdateOutputSlipDetail" class="card card-default">
+            <form asp-action="UpdateOutputSlipDetail">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label">Id</label>
+                                <input asp-for="Id" class="form-control" readonly />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="OutputSlipId" class="control-label">OutputSlipId</label>
+                                <input asp-for="OutputSlipId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="ProductId" class="control-label">ProductId</label>
+                                <input asp-for="ProductId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="Quantity" class="control-label">Quantity</label>
+                                <input asp-for="Quantity" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="Price" class="control-label">Price</label>
+                                <input asp-for="Price" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexOutputSlipDetail" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Update OutputSlipDetail" class="btn btn-info float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->

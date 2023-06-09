@@ -1,0 +1,53 @@
+﻿@using WebApp.Models.BL.UserBL
+@model UserDTO
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="CreateUser" class="card card-default">
+            <form asp-action="CreateUser">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="UserName" class="control-label">User Name</label>
+                                <input asp-for="UserName" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label">Password</label>
+                                <input asp-for="Password" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="Role" class="control-label">Role</label>
+                                <input asp-for="Role" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexUser" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Create New User" class="btn btn-success float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>

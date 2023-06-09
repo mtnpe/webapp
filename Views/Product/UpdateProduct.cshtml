@@ -1,0 +1,57 @@
+﻿@using WebApp.Models.BL.ProductBL
+@model ProductDTO
+@{
+    ViewData["Title"] = "Update product";
+}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="UpdateProduct" class="card card-default">
+            <form asp-action="UpdateProduct">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label">Id</label>
+                                <input asp-for="Id" class="form-control" readonly />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">Name</label>
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="WarehouseId" class="control-label">Warehouse ID</label>
+                                <input asp-for="WarehouseId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="Unit" class="control-label">Unit</label>
+                                <input asp-for="Unit" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexProduct" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Update Product" class="btn btn-info float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->

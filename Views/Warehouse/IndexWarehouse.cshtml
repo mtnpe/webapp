@@ -1,0 +1,93 @@
+﻿@using WebApp.Models.BL.WarehouseBL
+@model List<WarehouseDTO>
+
+@{
+    ViewBag.Title = "Warehouse";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        @{
+                            if (User.Identity.IsAuthenticated)
+                            {
+                                if (!User.IsInRole("Staff"))
+                                {
+                                    <div class="card-header pb-0">
+                                        <h3 class="card-title mt-2"><a asp-action="CreateWarehouse" type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>  Add warehouse</a></h3>
+                                    </div>
+                                }
+                            }
+                        }
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-3">
+                                <table class="table align-items-center justify-content-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:10%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
+                                            <th style="width:20%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                            <th style="width:25%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Address</th>
+                                            <th style="width:15%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name Keeper</th>
+
+                                            @{
+                                                if (User.Identity.IsAuthenticated)
+                                                {
+                                                    if (!User.IsInRole("Staff"))
+                                                    {
+                                                        <th style="width:30%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                                    }
+                                                }
+                                            }
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Id)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Name)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Address)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.NameKeeper)
+                                                </span>
+                                            </td>
+                                            @{
+                                                if (User.Identity.IsAuthenticated)
+                                                {
+                                                    if (!User.IsInRole("Staff"))
+                                                    {
+                                                        <td>
+                                                            <a class="card-title mt-2"><a asp-action="DeleteWarehouse" asp-route-id="@item.Id" type="button" class="btn btn-danger float-right"><i class="fa fa-trash"></i>  Delete </a></a>
+                                                            <a class="card-title mt-2"><a asp-action="UpdateWarehouse" asp-route-id="@item.Id" type="button" class="btn btn-success float-right"><i class="fa fa-pen"></i>  Update </a></a>
+                                                        </td>
+                                                    }
+                                                }
+                                            }
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

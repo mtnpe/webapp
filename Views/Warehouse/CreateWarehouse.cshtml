@@ -1,0 +1,60 @@
+﻿@using WebApp.Models.BL.WarehouseBL
+@model WarehouseDTO
+@{
+    ViewData["Title"] = "Create warehouse";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="CreateWarehouse" class="card card-default">
+            <form asp-action="CreateWarehouse">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label">Id</label>
+                                <input asp-for="Id" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">Name</label>
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label">Address</label>
+                                <input asp-for="Address" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="NameKeeper" class="control-label">Name Keeper</label>
+                                <input asp-for="NameKeeper" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexWarehouse" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Create New Warehouse" class="btn btn-success float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>

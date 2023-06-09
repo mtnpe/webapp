@@ -1,0 +1,34 @@
+﻿@using WebApp.Models.BL.OutputSlipDetailBL
+@model OutputSlipDetailDTO
+@{
+    ViewData["Title"] = "Delete OutputSlipDetail";
+}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="DeleteOutputSlipDetail" class="card card-default">
+            <form asp-action="DeleteOutputSlipDetail">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label">Id</label>
+                                <input asp-for="Id" class="form-control" readonly />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexOutputSlipDetail" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Delete OutputSlipDetail" class="btn btn-success float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->

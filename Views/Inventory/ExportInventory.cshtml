@@ -1,0 +1,51 @@
+﻿@using WebApp.Models.BL.InventoryBL
+@model InventoryDTO
+@{
+    ViewData["Title"] = "Export Inventory";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="ExportInventory" class="card card-default">
+            <form asp-action="ExportInventory">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label asp-for="WarehouseId" class="control-label">Warehouse Id</label>
+                                <input asp-for="WarehouseId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="DateTimeStart" class="control-label">DateTime Start</label>
+                                <input asp-for="DateTimeStart" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="DateTimeEnd" class="control-label">DateTime End</label>
+                                <input asp-for="DateTimeEnd" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Export New Report" class="btn btn-success float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>

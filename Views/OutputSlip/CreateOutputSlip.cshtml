@@ -1,0 +1,60 @@
+﻿@using WebApp.Models.BL.OutputSlipBL
+@model OutputSlipDTO
+@{
+    ViewData["Title"] = "Create OutputSlip";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div asp-action="CreateOutputSlip" class="card card-default">
+            <form asp-action="CreateOutputSlip">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label">Id</label>
+                                <input asp-for="Id" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="CustomerId" class="control-label">CustomerId</label>
+                                <input asp-for="CustomerId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="Date" class="control-label">Date</label>
+                                <input asp-for="Date" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="WarehouseId" class="control-label">WarehouseId</label>
+                                <input asp-for="WarehouseId" class="form-control" />
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="IndexOutputSlip" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Create New OutputSlip" class="btn btn-success float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>

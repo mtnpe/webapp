@@ -1,0 +1,76 @@
+﻿@using WebApp.Models.BL.OutputSlipDetailBL
+@model List<OutputSlipDetailDTO>
+
+@{
+    ViewBag.Title = "Output Slip Detail";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header pb-0">
+                            <h3 class="card-title mt-2">
+                            <a asp-action="CreateOutputSlipDetail" type="button" class="btn btn-primary float-right">
+                                <i class="fas fa-plus"></i>  Add Output Slip Detail</a></h3>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-3">
+                                <table class="table align-items-center justify-content-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:10%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
+                                            <th style="width:10%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">OutputSlipId</th>
+                                            <th style="width:20%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ProductId</th>
+                                            <th style="width:20%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Quantity</th>
+                                            <th style="width:10%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
+                                            <th style="width:30%" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Id)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.OutputSlipId)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.ProductId)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-xs font-weight-bold">
+                                                    @Html.DisplayFor(modelItem => item.Price)
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="card-title mt-2"><a asp-action="DeleteOutputSlipDetail" asp-route-id="@item.Id" type="button" class="btn btn-danger float-right"><i class="fa fa-trash"></i>  Delete </a></a>
+                                                <a class="card-title mt-2"><a asp-action="UpdateOutputSlipDetail" asp-route-id="@item.Id" type="button" class="btn btn-success float-right"><i class="fa fa-pen"></i>  Update </a></a>
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
