@@ -1646,11 +1646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ngoc Phuong\\source\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Ngoc Phuong\\source\\web\\webapp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Ngoc Phuong\\source\\WebApp\\WebApp.csproj",
+      "projectPath": "C:\\Users\\Ngoc Phuong\\source\\web\\webapp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\Ngoc Phuong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ngoc Phuong\\source\\WebApp\\obj\\",
+      "outputPath": "C:\\Users\\Ngoc Phuong\\source\\web\\webapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ngoc Phuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
